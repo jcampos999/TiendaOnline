@@ -1,0 +1,75 @@
+﻿@model ClassLibraryDominio.Article
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Carrito de Compras</h2>
+
+<table id="TblArticulo">
+    <tr>
+        <td> Artículo </td>
+        <td><select id="SelectArticle">   </select></td>
+    </tr>
+
+     <tr>
+        <td> Cantidad </td>
+        <td><input id="TxtCantidad" type="text"  onkeypress="return isNumberKey(event)" onKeyUp="calcularMonto()" /> </td>
+         
+    </tr>
+
+
+     <tr>
+        <td> Precio </td>
+        <td><input id="TxtPrecio" type="text" disabled="disabled" /> </td>
+         
+    </tr>
+
+      <tr>
+        <td> SubTotal </td>
+        <td><input id="TxtSubTotal" type="text" disabled="disabled" /> </td>
+         
+    </tr>
+
+      <tr>
+        <td>  <input id="BtnAgregar" type="button" value="Agregar"   /> </td>
+          
+        <td> </td>
+         
+    </tr>
+
+     <tr>
+        <td>    </td>
+          
+        <td>
+          <img id="ImgCompra" src=""  width="168" height="166"/>  </td>
+         
+    </tr>
+
+   
+
+    </table>
+
+
+<table id="TblDetalle"  >
+            <thead>
+                <tr>
+				    <th width="15%"> Número   </th>
+                    <th width="20%"> Articulo  </th>
+                    <th width="20%" > Código Articulo</th>
+                    <th width="15%"> Cantidad</th>                  
+                    <th width="15%">Precio</th>					   
+                    <th width="15%">Sub Total</th>
+                     <th width="20%">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="TblBodyDetail"> 
+            </tbody>
+        </table>
+
+
+
+
+    @section scripts {
+    <script src="~/Scripts/CargaLoad/LoadSelect.js"></script>
+}
